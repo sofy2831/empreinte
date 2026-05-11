@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://empreinte.axe-dossier.fr/sitemap.xml
