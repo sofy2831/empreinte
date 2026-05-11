@@ -124,13 +124,12 @@
     }
 
     .content{
-      display:grid;
-      grid-template-columns:1fr 320px;
-      gap:34px;
-      align-items:start;
+      display:block;
     }
 
     article{
+      max-width:900px;
+      margin:auto;
       background:rgba(255,255,255,.82);
       border:1px solid var(--border);
       border-radius:var(--radius);
@@ -194,66 +193,6 @@
       color:var(--accent);
     }
 
-    aside{
-      position:sticky;
-      top:92px;
-      display:grid;
-      gap:18px;
-    }
-
-    .side-card{
-      background:#fff;
-      border:1px solid var(--border);
-      border-radius:22px;
-      padding:22px;
-      box-shadow:0 10px 26px rgba(17,24,39,.06);
-    }
-
-    .side-card h3{
-      color:var(--dark);
-      line-height:1.2;
-      margin-bottom:10px;
-      letter-spacing:-.03em;
-    }
-
-    .side-card p{
-      color:var(--muted);
-      font-size:.95rem;
-      margin-bottom:14px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:13px 18px;
-      border-radius:999px;
-      font-weight:800;
-      transition:.2s ease;
-    }
-
-    .btn-primary{
-      background:var(--accent);
-      color:white;
-      box-shadow:0 12px 24px rgba(139,30,63,.20);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-2px);
-      background:#741832;
-    }
-
-    .btn-light{
-      background:#f8f5f0;
-      color:var(--dark);
-      border:1px solid var(--border);
-    }
-
-    .btn-light:hover{
-      border-color:rgba(139,30,63,.35);
-      transform:translateY(-2px);
-    }
-
     .internal-links{
       display:grid;
       grid-template-columns:repeat(2,1fr);
@@ -268,6 +207,13 @@
       padding:18px;
       font-weight:850;
       color:var(--accent);
+      transition:.2s ease;
+    }
+
+    .internal-links a:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 22px rgba(17,24,39,.06);
+      border-color:rgba(139,30,63,.30);
     }
 
     .warning{
@@ -300,14 +246,6 @@
     }
 
     @media(max-width:900px){
-      .content{
-        grid-template-columns:1fr;
-      }
-
-      aside{
-        position:static;
-      }
-
       .nav-links{
         display:none;
       }
@@ -485,40 +423,6 @@
           </div>
 
         </article>
-
-        <aside>
-          <div class="side-card">
-            <h3>L’Empreinte de la peur</h3>
-            <p>
-              Un témoignage de Sophie Dumas sur l’emprise psychologique,
-              la peur, le contrôle et la reconstruction.
-            </p>
-            <a class="btn btn-primary" href="https://www.amazon.fr/dp/B0F899MJHN" target="_blank" rel="noopener">
-              Voir le livre sur Amazon
-            </a>
-          </div>
-
-          <div class="side-card">
-            <h3>Page suivante</h3>
-            <p>
-              Comprendre pourquoi une victime reste dans une relation toxique,
-              même quand elle souffre.
-            </p>
-            <a class="btn btn-light" href="relation-toxique-pourquoi-on-reste.html">
-              Lire la suite
-            </a>
-          </div>
-
-          <div class="side-card">
-            <h3>Retour</h3>
-            <p>
-              Revenir à la page d’accueil du site.
-            </p>
-            <a class="btn btn-light" href="index.html">
-              Accueil
-            </a>
-          </div>
-        </aside>
 
       </div>
     </section>
