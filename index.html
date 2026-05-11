@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>L’Empreinte de la peur — Comprendre l’emprise psychologique</title>
+  <meta name="description" content="Comprendre l’emprise psychologique, reconnaître les signes invisibles d’une relation toxique et avancer vers la reconstruction. Découvrez le livre L’Empreinte de la peur de Sophie Dumas." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#1f2937" />
+
+  <link rel="canonical" href="https://empreinte.axe-dossier.fr/" />
+
+  <meta property="og:title" content="L’Empreinte de la peur — Comprendre l’emprise psychologique" />
+  <meta property="og:description" content="Un site pour comprendre l’emprise psychologique, reconnaître les mécanismes de manipulation et découvrir le livre L’Empreinte de la peur." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://empreinte.axe-dossier.fr/" />
+
+  <style>
+    :root{
+      --bg:#f8f5f0;
+      --bg2:#fffaf3;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --dark:#111827;
+      --accent:#8b1e3f;
+      --accent2:#c08457;
+      --card:#ffffff;
+      --border:rgba(31,41,55,.12);
+      --shadow:0 18px 45px rgba(17,24,39,.10);
+      --radius:24px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:linear-gradient(135deg,var(--bg),var(--bg2));
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(1120px,92%);
+      margin:auto;
+    }
+
+    header{
+      padding:22px 0;
+      position:sticky;
+      top:0;
+      background:rgba(248,245,240,.88);
+      backdrop-filter:blur(14px);
+      z-index:20;
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .brand{
+      font-weight:800;
+      letter-spacing:-.03em;
+      color:var(--dark);
+      font-size:1.05rem;
+    }
+
+    .brand span{
+      color:var(--accent);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      font-size:.95rem;
+      color:var(--muted);
+    }
+
+    .nav-links a:hover{
+      color:var(--accent);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:13px 20px;
+      border-radius:999px;
+      font-weight:700;
+      transition:.2s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:white;
+      box-shadow:0 12px 25px rgba(139,30,63,.22);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      background:#741832;
+    }
+
+    .btn-secondary{
+      background:white;
+      color:var(--dark);
+      border-color:var(--border);
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-2px);
+      border-color:rgba(139,30,63,.35);
+    }
+
+    .hero{
+      padding:86px 0 58px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:46px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 12px;
+      border:1px solid rgba(139,30,63,.20);
+      background:rgba(255,255,255,.6);
+      color:var(--accent);
+      border-radius:999px;
+      font-weight:800;
+      font-size:.82rem;
+      margin-bottom:18px;
+    }
+
+    h1{
+      font-size:clamp(2.35rem,5vw,4.75rem);
+      line-height:1.02;
+      letter-spacing:-.07em;
+      color:var(--dark);
+      margin-bottom:24px;
+    }
+
+    .lead{
+      font-size:clamp(1.05rem,2vw,1.3rem);
+      color:#4b5563;
+      max-width:720px;
+      margin-bottom:30px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:26px;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:.95rem;
+      max-width:680px;
+    }
+
+    .book-card{
+      background:rgba(255,255,255,.78);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .book-card::before{
+      content:"";
+      position:absolute;
+      inset:-80px -80px auto auto;
+      width:220px;
+      height:220px;
+      background:radial-gradient(circle,rgba(139,30,63,.18),transparent 68%);
+      border-radius:50%;
+    }
+
+    .book-cover{
+      aspect-ratio:3/4;
+      border-radius:18px;
+      background:
+        linear-gradient(160deg,rgba(17,24,39,.96),rgba(139,30,63,.88)),
+        radial-gradient(circle at 70% 20%,rgba(255,255,255,.2),transparent 30%);
+      color:white;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:28px;
+      min-height:420px;
+      position:relative;
+      box-shadow:0 22px 45px rgba(17,24,39,.25);
+    }
+
+    .book-cover small{
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:rgba(255,255,255,.72);
+      font-weight:700;
+    }
+
+    .book-cover strong{
+      font-size:2.35rem;
+      line-height:1;
+      letter-spacing:-.06em;
+      max-width:260px;
+    }
+
+    .book-cover span{
+      color:rgba(255,255,255,.8);
+      font-weight:600;
+    }
+
+    section{
+      padding:58px 0;
+    }
+
+    .section-head{
+      max-width:760px;
+      margin-bottom:28px;
+    }
+
+    .section-head h2{
+      font-size:clamp(1.9rem,3vw,3rem);
+      line-height:1.08;
+      letter-spacing:-.05em;
+      color:var(--dark);
+      margin-bottom:14px;
+    }
+
+    .section-head p{
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+
+    .quote-block{
+      background:var(--dark);
+      color:white;
+      border-radius:var(--radius);
+      padding:42px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .quote-block::after{
+      content:"Tic-tac";
+      position:absolute;
+      right:28px;
+      bottom:-18px;
+      font-size:6rem;
+      font-weight:900;
+      letter-spacing:-.08em;
+      color:rgba(255,255,255,.06);
+    }
+
+    .quote-block p{
+      font-size:clamp(1.25rem,2.5vw,2rem);
+      line-height:1.35;
+      max-width:840px;
+      font-weight:700;
+      letter-spacing:-.03em;
+    }
+
+    .quote-block .source{
+      margin-top:18px;
+      color:rgba(255,255,255,.72);
+      font-weight:600;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:24px;
+      box-shadow:0 10px 28px rgba(17,24,39,.06);
+      transition:.2s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+    }
+
+    .card .tag{
+      display:inline-block;
+      margin-bottom:12px;
+      color:var(--accent);
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:900;
+    }
+
+    .card h3{
+      font-size:1.25rem;
+      line-height:1.25;
+      color:var(--dark);
+      margin-bottom:10px;
+      letter-spacing:-.03em;
+    }
+
+    .card p{
+      color:var(--muted);
+      margin-bottom:16px;
+    }
+
+    .card a{
+      color:var(--accent);
+      font-weight:800;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .panel{
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:30px;
+      box-shadow:0 10px 30px rgba(17,24,39,.06);
+    }
+
+    .panel h2,
+    .panel h3{
+      color:var(--dark);
+      letter-spacing:-.04em;
+      line-height:1.12;
+      margin-bottom:14px;
+    }
+
+    .panel h2{
+      font-size:2rem;
+    }
+
+    .panel p{
+      color:#4b5563;
+      margin-bottom:14px;
+    }
+
+    .list{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .list div{
+      padding:14px 16px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:16px;
+      color:#374151;
+      font-weight:650;
+    }
+
+    .amazon{
+      background:linear-gradient(135deg,#8b1e3f,#111827);
+      color:white;
+      border-radius:var(--radius);
+      padding:38px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .amazon h2{
+      font-size:clamp(1.8rem,3vw,2.8rem);
+      line-height:1.08;
+      letter-spacing:-.05em;
+      margin-bottom:10px;
+    }
+
+    .amazon p{
+      color:rgba(255,255,255,.82);
+      max-width:680px;
+    }
+
+    .amazon .btn{
+      background:white;
+      color:#111827;
+      white-space:nowrap;
+    }
+
+    .faq{
+      display:grid;
+      gap:14px;
+    }
+
+    details{
+      background:rgba(255,255,255,.82);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px 20px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:800;
+      color:var(--dark);
+    }
+
+    details p{
+      margin-top:12px;
+      color:var(--muted);
+    }
+
+    footer{
+      padding:38px 0;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .footer-grid{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a:hover{
+      color:var(--accent);
+    }
+
+    @media(max-width:900px){
+      .hero-grid,
+      .split{
+        grid-template-columns:1fr;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .amazon{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        padding-top:56px;
+      }
+
+      .book-cover{
+        min-height:360px;
+      }
+
+      .quote-block,
+      .amazon{
+        padding:28px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Book",
+    "name":"L’Empreinte de la peur",
+    "author":{
+      "@type":"Person",
+      "name":"Sophie Dumas"
+    },
+    "description":"Un témoignage sur l’emprise psychologique, la violence invisible, la peur et la reconstruction.",
+    "url":"https://www.amazon.fr/dp/B0F899MJHN",
+    "inLanguage":"fr-FR"
+  }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">L’Empreinte <span>de la peur</span></a>
+
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#comprendre">Comprendre</a>
+        <a href="#signes">Signes</a>
+        <a href="#livre">Le livre</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://www.amazon.fr/dp/B0F899MJHN" target="_blank" rel="noopener">Amazon</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+
+        <div>
+          <div class="eyebrow">Emprise psychologique · Violence invisible · Reconstruction</div>
+
+          <h1>Comprendre l’emprise psychologique et retrouver sa liberté</h1>
+
+          <p class="lead">
+            La peur ne s’installe pas toujours d’un coup. Elle arrive parfois doucement,
+            sous couvert d’amour, de protection, de jalousie ou de promesses.
+            Ce site aide à reconnaître les signes invisibles d’une relation toxique
+            et à mettre des mots sur ce qui détruit en silence.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#signes">Reconnaître les signes</a>
+            <a class="btn btn-secondary" href="https://www.amazon.fr/dp/B0F899MJHN" target="_blank" rel="noopener">Découvrir le livre</a>
+          </div>
+
+          <p class="note">
+            Ce site accompagne le livre <strong>L’Empreinte de la peur</strong>, un témoignage de Sophie Dumas
+            sur l’emprise, la manipulation psychologique, la peur et le chemin lent vers la reconstruction.
+          </p>
+        </div>
+
+        <aside class="book-card" id="livre" aria-label="Présentation du livre L’Empreinte de la peur">
+          <div class="book-cover">
+            <small>Sophie Dumas</small>
+            <strong>L’Empreinte de la peur</strong>
+            <span>Un témoignage sur l’emprise, la peur et la reconstruction.</span>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="quote-block">
+          <p>
+            Tic-tac, tic-tac. C’est le bruit du temps qui passe.
+            Celui qu’on perd à essayer de comprendre comment la peur a fini par entrer dans sa vie.
+          </p>
+          <div class="source">— Inspiré de L’Empreinte de la peur</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comprendre">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>L’emprise ne commence pas toujours par la violence.</h2>
+          <p>
+            Elle commence souvent par une présence intense, des mots qui rassurent,
+            une attention excessive, puis un contrôle progressif. Ce basculement est précisément
+            ce qui rend l’emprise psychologique difficile à identifier.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <span class="tag">Comprendre</span>
+            <h3>Qu’est-ce que l’emprise psychologique ?</h3>
+            <p>
+              Une relation où l’autre prend peu à peu le contrôle de vos choix,
+              de vos émotions, de vos relations et de votre perception de la réalité.
+            </p>
+            <a href="comment-reconnaitre-emprise-psychologique.html">Lire la page →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Relation toxique</span>
+            <h3>Pourquoi est-il si difficile de partir ?</h3>
+            <p>
+              Parce que l’emprise alterne séduction, culpabilité, peur, espoir et dépendance émotionnelle.
+              Le piège est là : on attend le retour de la personne du début.
+            </p>
+            <a href="relation-toxique-pourquoi-on-reste.html">Comprendre le mécanisme →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Reconstruction</span>
+            <h3>Comment se reconstruire après l’emprise ?</h3>
+            <p>
+              Se reconstruire ne signifie pas oublier. Cela signifie reprendre possession
+              de son corps, de sa pensée, de ses limites et de son avenir.
+            </p>
+            <a href="reconstruction-apres-emprise.html">Avancer après l’emprise →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="signes">
+      <div class="wrap split">
+
+        <div class="panel">
+          <h2>Les signes qui doivent alerter</h2>
+          <p>
+            Une relation toxique ne ressemble pas forcément à une caricature.
+            Elle peut être belle au départ, intense, presque idéale.
+            Puis certains signaux apparaissent.
+          </p>
+
+          <div class="list">
+            <div>Jalousie présentée comme une preuve d’amour</div>
+            <div>Besoin de savoir où vous êtes, avec qui, et pourquoi</div>
+            <div>Critiques, humiliations ou insultes après les phases de tendresse</div>
+            <div>Isolement progressif de vos amis, proches ou collègues</div>
+            <div>Culpabilisation dès que vous posez une limite</div>
+            <div>Peur de provoquer une colère ou une crise</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Le vrai danger : s’habituer à l’anormal</h3>
+          <p>
+            Au début, on excuse. Ensuite, on explique. Puis on se justifie.
+            Et sans s’en rendre compte, on adapte sa vie entière pour éviter les réactions de l’autre.
+          </p>
+          <p>
+            C’est là que l’emprise devient dangereuse : elle modifie votre façon de penser,
+            de parler, de décider, de dormir, de sortir, d’aimer et même de vous souvenir.
+          </p>
+          <p>
+            <strong>L’Empreinte de la peur</strong> raconte cette mécanique de l’intérieur :
+            l’installation lente de la peur, le contrôle, la confusion, puis la nécessité vitale
+            de reprendre pied.
+          </p>
+          <a class="btn btn-primary" href="https://www.amazon.fr/dp/B0F899MJHN" target="_blank" rel="noopener">Lire le livre sur Amazon</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="amazon">
+          <div>
+            <h2>Découvrir L’Empreinte de la peur</h2>
+            <p>
+              Un livre pour celles et ceux qui cherchent à comprendre ce qu’est l’emprise psychologique,
+              pourquoi la peur reste après la fuite, et comment une personne peut tenter de redevenir elle-même.
+            </p>
+          </div>
+          <a class="btn" href="https://www.amazon.fr/dp/B0F899MJHN" target="_blank" rel="noopener">Voir sur Amazon</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Questions fréquentes sur l’emprise psychologique</h2>
+          <p>
+            Ces réponses ne remplacent pas l’aide d’un professionnel. Elles servent à poser des mots
+            sur des situations souvent confuses, banalisées ou minimisées.
+          </p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Comment reconnaître une emprise psychologique ?</summary>
+            <p>
+              L’emprise psychologique se reconnaît souvent à un contrôle progressif :
+              surveillance, culpabilisation, isolement, peur de déplaire, perte de confiance en soi
+              et impression de ne plus pouvoir décider librement.
+            </p>
+          </details>
+
+          <details>
+            <summary>Pourquoi une victime reste-t-elle dans une relation toxique ?</summary>
+            <p>
+              Parce que l’emprise mélange affection, peur, dépendance, espoir et confusion.
+              La victime ne reste pas par faiblesse. Elle reste souvent parce que son discernement
+              a été attaqué progressivement.
+            </p>
+          </details>
+
+          <details>
+            <summary>La violence psychologique est-elle une vraie violence ?</summary>
+            <p>
+              Oui. Elle peut détruire profondément : anxiété, hypervigilance, perte d’estime,
+              isolement, troubles du sommeil, peur constante. Le fait qu’elle ne laisse pas toujours
+              de traces visibles ne la rend pas moins grave.
+            </p>
+          </details>
+
+          <details>
+            <summary>Peut-on se reconstruire après une emprise ?</summary>
+            <p>
+              Oui, mais rarement en un claquement de doigts. La reconstruction demande du temps,
+              de la sécurité, parfois un accompagnement thérapeutique, et surtout la possibilité
+              de reprendre confiance dans sa propre perception.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        © Sophie Dumas — L’Empreinte de la peur
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="livre-emprise-psychologique.html">Le livre</a>
+        <a href="https://www.amazon.fr/dp/B0F899MJHN" target="_blank" rel="noopener">Amazon</a>
+        <a href="https://axe-dossier.fr" target="_blank" rel="noopener">Axe Dossier</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
